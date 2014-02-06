@@ -1,5 +1,29 @@
 <div class="container">
   <h1>User Skills and Levels</h1>
 
+  <% if @users %>
+    <% @users.reverse_each do |user| %>
+
+        <table class="user-skills">
+          <tr>
+            <th>Name</th>
+            <th>Skill</th>
+            <th>Years</th>
+            <th>Formal?</th>
+          </tr>
+          <td><%= user.name %></td>
+
+          <% user.skills.each do |skill| %>
+            <td><%= skill.name %>(<%= skill.context %>)</td>
+            <% user.proficiencies.each do |proficiency| %>
+              <td><%= proficiency.years %></td>
+              <td><%= proficiency.formal %></td>
+            <% end %>
+          <% end %>
+        </table>
+
+    <% end %>
+  <% end %>
+
   <%# TODO: display the skills and proficiency levels for each user ... %>
 </div>

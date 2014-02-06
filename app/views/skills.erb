@@ -1,0 +1,25 @@
+<div class="container">
+  <form action='/skills' method="post">
+
+    <label for="skill-name">Skill Name</label><br>
+    <input id="skill-name" type="text" name="skill"><br>
+
+    <label for="skill-context">Context</label><br>
+    <select id="skill-context" name="context">
+      <option value="technical">Technical</option>
+      <option value="creative">Creative</option>
+    </select><br>
+
+    <label for="skill-years">Years</label><br>
+    <input id="skill-years" type="number" name="years" min="1"><br>
+
+    <label for="skill-formal">Formally Trained?</label><br>
+    <select id="skill-formal" name="formal">
+      <option value="true">Yes</option>
+      <option value="false">No</option>
+    </select><br>
+
+    <br><input type="submit" value="submit">
+  </form>
+
+</div>
